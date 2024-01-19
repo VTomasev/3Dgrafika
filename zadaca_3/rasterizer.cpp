@@ -7,6 +7,16 @@ using namespace std;
 // compile with:
 // g++ rasterizer.cpp tgaimage.cpp -o out.exe
 
+// dimenzije slike
+const int width  = 200;
+const int height = 200;
+
+// definirajmo boje
+const TGAColor white = TGAColor(255, 255, 255, 255);
+const TGAColor red   = TGAColor(255, 0, 0, 255);
+const TGAColor blue  = TGAColor(0, 0, 255, 255);
+const TGAColor green = TGAColor(0, 255, 0, 255);
+
 void set_color(int x, int y, TGAImage &image, TGAColor color, bool invert = false)
 {
     image.set(x, y, color);
@@ -97,15 +107,6 @@ void draw_triangle(TGAImage& image, float x0, float y0, float z0, float x1, floa
     }
 }
 
-// dimenzije slike
-const int width  = 200;
-const int height = 200;
-
-// definirajmo boje
-const TGAColor white = TGAColor(255, 255, 255, 255);
-const TGAColor red   = TGAColor(255, 0, 0, 255);
-const TGAColor blue  = TGAColor(0, 0, 255, 255);
-const TGAColor green = TGAColor(0, 255, 0, 255);
 
 int main()
 {
